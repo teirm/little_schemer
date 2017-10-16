@@ -1,0 +1,17 @@
+// Notes to Q&A for chapter 3
+// 1 October 2017
+
+pg 53:
+======
+Can you see how multimember works?
+    Multimember takes an atom and a lat
+    Checks to see if lat is null first
+    if not null, checks to see if atom a == car lat
+        if it does, call multimember a on cdr lat (dropping car lat)
+    else we cons car lat onto multimember a cdr lat. 
+
+The statement:
+  ((null? lat) (quote ()))
+works because we will be consing
+a bunch of elements into the empty
+list once we hit this base case.
